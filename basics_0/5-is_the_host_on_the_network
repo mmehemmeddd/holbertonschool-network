@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Əgər heç bir arqument (IP ünvanı) verilməyibsə
+if [ -z "$1" ]; then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+    # Əgər IP ünvanı verilibsə, -c 5 parametri ilə tam 5 dəfə ping atır
+    ping -c 5 "$1"
+fi
